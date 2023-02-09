@@ -10,6 +10,7 @@ import '../../posts/typedefs/user_id.dart';
 import '../models/auth_result.dart';
 
 class Authenticator {
+  const Authenticator();
   FirebaseAuth get _auth => FirebaseAuth.instance;
   User? get user => _auth.currentUser;
   UserId? get userId => user?.uid;
