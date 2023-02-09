@@ -48,14 +48,17 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 
-	<!-- facebook login configuration -->
+	<!-- facebook & google login configuration -->
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-		<key>CFBundleURLSchemes</key>
-		<array>
-			<string>fb725285015797435</string>
-		</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb725285015797435</string>
+				<string>com.googleusercontent.apps.633573651787-0j6pg969i0dst38h8mtra61lcsr2j179</string>
+			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
