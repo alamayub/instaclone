@@ -36,25 +36,27 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Authenticator'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextButton(
-            onPressed: () async {
-              final res = await Authenticator().loginWithGoogle();
-              res.log();
-            },
-            child: const Text('Sign In With Google'),
-          ),
-          TextButton(
-            onPressed: () async {
-              final res = await Authenticator().loginWithFacebook();
-              res.log();
-            },
-            child: const Text('Sign In With Facebook'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () async {
+                final res = await const Authenticator().loginWithGoogle();
+                res.log();
+              },
+              child: const Text('Sign In With Google'),
+            ),
+            TextButton(
+              onPressed: () async {
+                final res = await const Authenticator().loginWithFacebook();
+                res.log();
+              },
+              child: const Text('Sign In With Facebook'),
+            ),
+          ],
+        ),
       ),
     );
   }
