@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '633573651787',
     projectId: 'instaclone-710e7',
     storageBucket: 'instaclone-710e7.appspot.com',
+    androidClientId: '633573651787-9rrjlpudh8blotu6m8jfaghvfjh1vlph.apps.googleusercontent.com',
     iosClientId: '633573651787-0j6pg969i0dst38h8mtra61lcsr2j179.apps.googleusercontent.com',
     iosBundleId: 'com.example.instaClone',
   );
