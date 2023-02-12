@@ -5,9 +5,10 @@ import 'package:insta_clone/state/posts/typedefs/user_id.dart';
 class UserInfoStorage {
   const UserInfoStorage();
 
-  // Future<bool> saveUserInfo({
-  //   required UserId userId,
-  //   required String displayName,
-  //   required String email,
-  // }) async {}
+  Future<bool> saveUserInfo({
+    required UserId userId,
+    required String displayName,
+    required String email,
+  }) async =>
+      true;
 }

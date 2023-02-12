@@ -25,6 +25,21 @@ class Authenticator {
     await FacebookAuth.instance.logOut();
   }
 
+  // login with email & password
+  Future<AuthResult> loginWithEmailAndPassword(
+      {required String email, required String password}) async {
+    try {
+      await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return AuthResult.success;
+    } on FirebaseAuthException catch (e) {
+      log('email password sign in error 38 ${e.toString()}');
+      return AuthResult.failure;
+    }
+  }
+
   // login with facebook
   Future<AuthResult> loginWithFacebook() async {
     final loginResult = await FacebookAuth.instance.login();
